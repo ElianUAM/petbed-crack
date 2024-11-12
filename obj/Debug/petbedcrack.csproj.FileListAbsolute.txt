@@ -1,0 +1,12 @@
+C:\Users\elian\OneDrive\Escritorio\PetBed\obj\Debug\petbedcrack.csproj.AssemblyReference.cache
+C:\Users\elian\OneDrive\Escritorio\PetBed\obj\Debug\petbed.Form1.resources
+C:\Users\elian\OneDrive\Escritorio\PetBed\obj\Debug\petbed.Form2.resources
+C:\Users\elian\OneDrive\Escritorio\PetBed\obj\Debug\petbed.Form3.resources
+C:\Users\elian\OneDrive\Escritorio\PetBed\obj\Debug\petbedcrack.csproj.GenerateResource.cache
+C:\Users\elian\OneDrive\Escritorio\PetBed\obj\Debug\petbedcrack.Properties.Resources.resources
+C:\Users\elian\OneDrive\Escritorio\PetBed\obj\Debug\petbedcrack.csproj.CoreCompileInputs.cache
+C:\Users\elian\OneDrive\Escritorio\PetBed\bin\Debug\petbedcrack.exe.config
+C:\Users\elian\OneDrive\Escritorio\PetBed\bin\Debug\petbedcrack.exe
+C:\Users\elian\OneDrive\Escritorio\PetBed\bin\Debug\petbedcrack.pdb
+C:\Users\elian\OneDrive\Escritorio\PetBed\obj\Debug\petbedcrack.exe
+C:\Users\elian\OneDrive\Escritorio\PetBed\obj\Debug\petbedcrack.pdb

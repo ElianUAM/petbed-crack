@@ -29,15 +29,15 @@ namespace petbed
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem.ToString() == "Otro")
+            if (cbxraza.SelectedItem.ToString() == "Otro")
             {
                 // Habilitar el TextBox
-                textBox1.Enabled = true;
+                txtraza.Enabled = true;
             }
             else
             {
                 // Deshabilitar el TextBox si se elige otra opción
-                textBox1.Enabled = false;
+                txtraza.Enabled = false;
             }
         }
 
