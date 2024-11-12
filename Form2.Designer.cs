@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,20 +58,24 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(242, 9);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(182, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 38);
+            this.label1.Size = new System.Drawing.Size(251, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registra tus datos:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 97);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 79);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(224, 29);
+            this.label2.Size = new System.Drawing.Size(190, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre Completo: ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -78,92 +83,100 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 150);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 122);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 29);
+            this.label4.Size = new System.Drawing.Size(97, 22);
             this.label4.TabIndex = 3;
             this.label4.Text = "Teléfono: ";
             // 
             // txtnomb
             // 
-            this.txtnomb.Location = new System.Drawing.Point(245, 103);
-            this.txtnomb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtnomb.Location = new System.Drawing.Point(205, 83);
+            this.txtnomb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtnomb.Name = "txtnomb";
-            this.txtnomb.Size = new System.Drawing.Size(175, 22);
+            this.txtnomb.Size = new System.Drawing.Size(132, 20);
             this.txtnomb.TabIndex = 4;
             this.txtnomb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnomb_KeyPress);
             // 
             // txttelefono
             // 
-            this.txttelefono.Location = new System.Drawing.Point(144, 158);
-            this.txttelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txttelefono.Location = new System.Drawing.Point(113, 124);
+            this.txttelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txttelefono.Name = "txttelefono";
-            this.txttelefono.Size = new System.Drawing.Size(136, 22);
+            this.txttelefono.Size = new System.Drawing.Size(103, 20);
             this.txttelefono.TabIndex = 5;
             this.txttelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttelefono_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 199);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 162);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(227, 29);
+            this.label3.Size = new System.Drawing.Size(189, 22);
             this.label3.TabIndex = 6;
             this.label3.Text = "Correo Electrónico: ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 249);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 202);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 29);
+            this.label5.Size = new System.Drawing.Size(106, 22);
             this.label5.TabIndex = 7;
             this.label5.Text = "Dirección: ";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 295);
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 240);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(290, 29);
+            this.label6.Size = new System.Drawing.Size(255, 22);
             this.label6.TabIndex = 8;
             this.label6.Text = "Contacto de Emergencia: ";
             // 
             // txtemail
             // 
-            this.txtemail.Location = new System.Drawing.Point(249, 207);
-            this.txtemail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtemail.Location = new System.Drawing.Point(205, 166);
+            this.txtemail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(159, 22);
+            this.txtemail.Size = new System.Drawing.Size(120, 20);
             this.txtemail.TabIndex = 9;
             this.txtemail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtemail_KeyPress);
             // 
             // txtdire
             // 
-            this.txtdire.Location = new System.Drawing.Point(149, 256);
-            this.txtdire.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtdire.Location = new System.Drawing.Point(122, 206);
+            this.txtdire.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtdire.Name = "txtdire";
-            this.txtdire.Size = new System.Drawing.Size(237, 22);
+            this.txtdire.Size = new System.Drawing.Size(179, 20);
             this.txtdire.TabIndex = 10;
             // 
             // txtctc1
             // 
-            this.txtctc1.Location = new System.Drawing.Point(312, 302);
-            this.txtctc1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtctc1.Location = new System.Drawing.Point(271, 244);
+            this.txtctc1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtctc1.Name = "txtctc1";
-            this.txtctc1.Size = new System.Drawing.Size(155, 22);
+            this.txtctc1.Size = new System.Drawing.Size(117, 20);
             this.txtctc1.TabIndex = 11;
             // 
             // bttregistrar
             // 
-            this.bttregistrar.Location = new System.Drawing.Point(205, 405);
-            this.bttregistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bttregistrar.Location = new System.Drawing.Point(154, 329);
+            this.bttregistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bttregistrar.Name = "bttregistrar";
-            this.bttregistrar.Size = new System.Drawing.Size(101, 34);
+            this.bttregistrar.Size = new System.Drawing.Size(76, 28);
             this.bttregistrar.TabIndex = 12;
             this.bttregistrar.Text = "Registrar";
             this.bttregistrar.UseVisualStyleBackColor = true;
@@ -172,20 +185,19 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(16, 338);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(12, 275);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(218, 29);
+            this.label7.Size = new System.Drawing.Size(177, 22);
             this.label7.TabIndex = 13;
             this.label7.Text = "Número de Perros:";
             // 
             // txtnumper
             // 
-            this.txtnumper.Location = new System.Drawing.Point(249, 343);
-            this.txtnumper.Margin = new System.Windows.Forms.Padding(4);
+            this.txtnumper.Location = new System.Drawing.Point(195, 279);
             this.txtnumper.Name = "txtnumper";
-            this.txtnumper.Size = new System.Drawing.Size(132, 22);
+            this.txtnumper.Size = new System.Drawing.Size(100, 20);
             this.txtnumper.TabIndex = 14;
             this.txtnumper.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnumper_KeyPress);
             // 
@@ -207,10 +219,10 @@
             // 
             // continuar
             // 
-            this.continuar.Location = new System.Drawing.Point(431, 405);
-            this.continuar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.continuar.Location = new System.Drawing.Point(323, 329);
+            this.continuar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.continuar.Name = "continuar";
-            this.continuar.Size = new System.Drawing.Size(101, 34);
+            this.continuar.Size = new System.Drawing.Size(76, 28);
             this.continuar.TabIndex = 16;
             this.continuar.Text = "Continuar";
             this.continuar.UseVisualStyleBackColor = true;
@@ -218,9 +230,10 @@
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.continuar);
             this.Controls.Add(this.txtnumper);
             this.Controls.Add(this.label7);
@@ -236,7 +249,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form2";
             this.Text = "Sistema de Reserva \"PetBed\"";
             this.Load += new System.EventHandler(this.Form2_Load);

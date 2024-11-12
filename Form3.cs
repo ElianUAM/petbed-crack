@@ -41,7 +41,21 @@ namespace petbed
             }
         }
 
+        private void bttsubirimg_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
 
+            // Establecer los filtros para solo mostrar imágenes
+            openFileDialog.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+            openFileDialog.Title = "Seleccionar una imagen";
+
+            // Verificar si el usuario seleccionó un archivo
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Cargar la imagen seleccionada en el PictureBox
+                imagenperro.Image = System.Drawing.Image.FromFile(openFileDialog.FileName);
+            }
+        }
     }
 
 }
