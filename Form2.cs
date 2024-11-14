@@ -20,7 +20,10 @@ namespace petbed
             InitializeComponent();
         }
 
+        
         [Serializable]
+
+
         public class FormData
         {
             public string txtnombrecompleto { get; set; }
