@@ -1,4 +1,5 @@
-﻿using System;
+﻿using petbedcrack;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,10 +15,20 @@ namespace petbed
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        private Form2 formanterior;
+        private Form2 formprincipal;
+        private Form2 form2;
+
+        public Form3(Form2 formanterior, Form2 formprincipal)
         {
             InitializeComponent();
+            this.formanterior = formanterior;
+            this.formprincipal = formprincipal;
+        }
 
+        public Form3(Form2 form2)
+        {
+            this.form2 = form2;
         }
 
         [Serializable]
@@ -191,7 +202,16 @@ namespace petbed
 
         private void button1_Click(object sender, EventArgs e)
         {
+            formprincipal.formulariocompletado();
+            this.Hide();
+
             GuardarDatos(rbttdocil, rbttagresi, cbxtamaño, cbxraza, imagenperro);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            formanterior.Show();
         }
     }
 

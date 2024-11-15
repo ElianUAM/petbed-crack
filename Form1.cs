@@ -1,4 +1,5 @@
-﻿using System;
+﻿using petbedcrack;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,9 +36,9 @@ namespace petbed
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.Show();
-
+            Form form4 = new Form4();
+            this.Hide();
+            form4.Show();
         }
     }
 }

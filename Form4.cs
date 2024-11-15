@@ -1,4 +1,5 @@
-﻿using System;
+﻿using petbed;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,26 @@ namespace petbedcrack
 
         private void Form4_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form form2 = new Form2(this);
+            this.Hide();
+            form2.Text = "Datos del Cliente";
+            form2.Size = new System.Drawing.Size(616, 405);
+            form2.Show();
 
         }
     }

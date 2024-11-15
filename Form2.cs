@@ -1,8 +1,10 @@
-﻿using System;
+﻿using petbedcrack;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -13,11 +15,17 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace petbed
 {
+
+    
     public partial class Form2 : Form
     {
-        public Form2()
+
+
+        private Form4 formAnterior;
+        public Form2(Form4 formAnterior)
         {
             InitializeComponent();
+            this.formAnterior = formAnterior;
         }
 
         
@@ -58,7 +66,7 @@ namespace petbed
                 formatter.Serialize(stream, Datos_Clientes); // Serializa el objeto 'data' y lo guarda en el archivo
             }
 
-            MessageBox.Show("Datos guardados con éxito.");
+            
         }
 
 
@@ -103,12 +111,53 @@ namespace petbed
 
         }
 
+        private int totalformularios;
+        private int formularioscreados;
+
+
+
         private void registrar(object sender, EventArgs e)
         {
-            
-            GuardarDatos();
-            
+            if (int.TryParse(txtnumper.Text, out totalformularios) && totalformularios > 0)
+            {
+                formularioscreados = 0;
+                crearformulario();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingresa un numero válido");
+            }
         }
+        
+        private void crearformulario()
+        {
+            if (formularioscreados < totalformularios)
+            {
+                
+                Form3 form3 = new Form3(this);
+                this.Hide();
+                form3.Show();
+            }
+            else
+            {
+                MessageBox.Show("");
+            }
+        }
+
+        public void formulariocompletado()
+        {
+            formularioscreados++;
+            if (formularioscreados < totalformularios)
+            {
+                crearformulario();
+            }
+            else
+            {
+                MessageBox.Show("");
+            }
+        }
+
+
 
         private void txttelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -169,35 +218,12 @@ namespace petbed
             }
         }
 
+       
+            
         private void bttContinuar (object sender, EventArgs e)
         {
-            if (int.TryParse(txtnumper.Text, out int numero))
-            {
-                // Validar que el número sea positivo
-                if (numero > 0)
-                {
-                    // Crear los formularios dinamicamente
-                    for (int i = 0; i < numero; i++)
-                    {
-                        // Crear un nuevo formulario
-                        Form form3 = new Form3();
-                        form3.Text = "Formulario " + (i + 1);
-                        form3.Size = new System.Drawing.Size(616, 405);
-
-
-                        // Mostrar el formulario dinámico
-                        form3.Show();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Por favor, ingrese un número mayor que 0.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor, ingrese un número válido.");
-            }
+            this.Hide();
+            formAnterior.Show();
         }
     }
 }
