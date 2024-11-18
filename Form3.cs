@@ -18,6 +18,7 @@ namespace petbed
         private Form2 formanterior;
         private Form2 formprincipal;
         private Form2 form2;
+        private Form5 form5;
 
         public Form3(Form2 formanterior, Form2 formprincipal)
         {
@@ -28,6 +29,7 @@ namespace petbed
 
         public Form3(Form2 form2)
         {
+            InitializeComponent();
             this.form2 = form2;
         }
 
@@ -41,6 +43,7 @@ namespace petbed
             public string cbxtamaño { get; set; }
             public string rbttcomportamiento { get; set; }
             public string rbttsexo { get; set; }
+            public string txtinstrucciones { get; set; }
             public byte[] imagenperro { get; set; }
 
         }
@@ -77,11 +80,12 @@ namespace petbed
             {
                 txtnombreperro = txtnombreperro.Text,
                 cbxraza = cbxraza.SelectedItem?.ToString(),
-                txtedad = txtedad.Text, 
+                txtedad = txtedad.Text,
                 txtpeso = txtpeso.Text,
                 cbxtamaño = cbxtamaño.SelectedItem?.ToString(),
                 rbttcomportamiento = rbttdocil.Checked ? "Dócil" : rbttagresi.Checked ? "Agresivo" : null,
                 rbttsexo = rbttmacho.Checked ? "Macho" : rbtthembra.Checked ? "Hembra" : null,
+                txtinstrucciones = txtespecial.Text, 
                 imagenperro = ConvertirImagenABytes(imagenperro.Image)
 
 
@@ -95,7 +99,7 @@ namespace petbed
                 formatter.Serialize(stream, Datos_Perros); // Serializa el objeto 'data' y lo guarda en el archivo
             }
 
-            MessageBox.Show("Datos guardados con éxito.");
+            
         }
 
 
@@ -118,6 +122,8 @@ namespace petbed
                     txtedad.Text = data.txtedad;
                     txtpeso.Text = data.txtpeso;
                     cbxtamaño.Text = data.cbxtamaño;
+                    txtespecial.Text = data.txtinstrucciones;
+                    
 
                     if (!string.IsNullOrEmpty(data.cbxtamaño) && cbxtamaño.Items.Contains(data.cbxtamaño))
                     {
@@ -202,16 +208,30 @@ namespace petbed
 
         private void button1_Click(object sender, EventArgs e)
         {
-            formprincipal.formulariocompletado();
-            this.Hide();
-
             GuardarDatos(rbttdocil, rbttagresi, cbxtamaño, cbxraza, imagenperro);
+            Form form5 = new Form5(this);
+            this.Hide();
+            form5.Show();
+
+
+            
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            
             this.Hide();
             formanterior.Show();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imagenperro_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

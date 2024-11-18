@@ -21,11 +21,11 @@ namespace petbed
     {
 
 
-        private Form4 formAnterior;
-        public Form2(Form4 formAnterior)
+        private Form4 formanterior;
+        public Form2(Form4 formanterior)
         {
             InitializeComponent();
-            this.formAnterior = formAnterior;
+            this.formanterior = formanterior;
         }
 
         
@@ -127,6 +127,8 @@ namespace petbed
             {
                 MessageBox.Show("Por favor, ingresa un numero válido");
             }
+
+
         }
         
         private void crearformulario()
@@ -144,18 +146,7 @@ namespace petbed
             }
         }
 
-        public void formulariocompletado()
-        {
-            formularioscreados++;
-            if (formularioscreados < totalformularios)
-            {
-                crearformulario();
-            }
-            else
-            {
-                MessageBox.Show("");
-            }
-        }
+        
 
 
 
@@ -223,7 +214,7 @@ namespace petbed
         private void bttContinuar (object sender, EventArgs e)
         {
             this.Hide();
-            formAnterior.Show();
+            formanterior.Show();
         }
     }
 }

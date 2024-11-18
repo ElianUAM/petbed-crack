@@ -70,6 +70,7 @@
             this.dtphospedaje.Name = "dtphospedaje";
             this.dtphospedaje.Size = new System.Drawing.Size(256, 23);
             this.dtphospedaje.TabIndex = 1;
+            this.dtphospedaje.ValueChanged += new System.EventHandler(this.dtphospedaje_ValueChanged);
             // 
             // dtpsalida
             // 
@@ -230,7 +231,7 @@
             this.groupBox3.Controls.Add(this.radioButton4);
             this.groupBox3.Controls.Add(this.radioButton5);
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(18, 139);
+            this.groupBox3.Location = new System.Drawing.Point(15, 139);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(376, 63);
             this.groupBox3.TabIndex = 17;

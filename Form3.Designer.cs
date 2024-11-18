@@ -51,6 +51,9 @@
             this.rbttagresi = new System.Windows.Forms.RadioButton();
             this.bttregistrar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtespecial = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imagenperro)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +75,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 66);
+            this.label2.Location = new System.Drawing.Point(12, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 23);
             this.label2.TabIndex = 2;
@@ -83,7 +86,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 103);
+            this.label3.Location = new System.Drawing.Point(13, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 23);
             this.label3.TabIndex = 3;
@@ -94,7 +97,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 140);
+            this.label4.Location = new System.Drawing.Point(13, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 23);
             this.label4.TabIndex = 4;
@@ -105,7 +108,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 179);
+            this.label5.Location = new System.Drawing.Point(17, 152);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 23);
             this.label5.TabIndex = 5;
@@ -116,7 +119,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 253);
+            this.label6.Location = new System.Drawing.Point(13, 219);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(185, 23);
             this.label6.TabIndex = 6;
@@ -127,7 +130,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(13, 219);
+            this.label7.Location = new System.Drawing.Point(13, 182);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(153, 23);
             this.label7.TabIndex = 7;
@@ -160,7 +163,7 @@
             "Husky",
             "Alaskan Malamute",
             "Otro"});
-            this.cbxraza.Location = new System.Drawing.Point(81, 108);
+            this.cbxraza.Location = new System.Drawing.Point(87, 86);
             this.cbxraza.Name = "cbxraza";
             this.cbxraza.Size = new System.Drawing.Size(121, 21);
             this.cbxraza.TabIndex = 9;
@@ -170,30 +173,30 @@
             // 
             this.txtraza.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtraza.Enabled = false;
-            this.txtraza.Location = new System.Drawing.Point(224, 108);
+            this.txtraza.Location = new System.Drawing.Point(245, 58);
             this.txtraza.Name = "txtraza";
             this.txtraza.Size = new System.Drawing.Size(100, 20);
             this.txtraza.TabIndex = 10;
             // 
             // txtnombreperro
             // 
-            this.txtnombreperro.Location = new System.Drawing.Point(103, 70);
+            this.txtnombreperro.Location = new System.Drawing.Point(108, 58);
             this.txtnombreperro.Name = "txtnombreperro";
             this.txtnombreperro.Size = new System.Drawing.Size(131, 20);
             this.txtnombreperro.TabIndex = 11;
             // 
             // txtedad
             // 
-            this.txtedad.Location = new System.Drawing.Point(80, 144);
+            this.txtedad.Location = new System.Drawing.Point(79, 123);
             this.txtedad.Name = "txtedad";
-            this.txtedad.Size = new System.Drawing.Size(61, 20);
+            this.txtedad.Size = new System.Drawing.Size(37, 20);
             this.txtedad.TabIndex = 12;
             // 
             // rbttmacho
             // 
             this.rbttmacho.AutoSize = true;
             this.rbttmacho.BackColor = System.Drawing.Color.Transparent;
-            this.rbttmacho.Location = new System.Drawing.Point(81, 186);
+            this.rbttmacho.Location = new System.Drawing.Point(79, 158);
             this.rbttmacho.Name = "rbttmacho";
             this.rbttmacho.Size = new System.Drawing.Size(58, 17);
             this.rbttmacho.TabIndex = 13;
@@ -205,7 +208,7 @@
             // 
             this.rbtthembra.AutoSize = true;
             this.rbtthembra.BackColor = System.Drawing.Color.Transparent;
-            this.rbtthembra.Location = new System.Drawing.Point(161, 186);
+            this.rbtthembra.Location = new System.Drawing.Point(143, 158);
             this.rbtthembra.Name = "rbtthembra";
             this.rbtthembra.Size = new System.Drawing.Size(62, 17);
             this.rbtthembra.TabIndex = 14;
@@ -215,7 +218,7 @@
             // 
             // txtpeso
             // 
-            this.txtpeso.Location = new System.Drawing.Point(158, 221);
+            this.txtpeso.Location = new System.Drawing.Point(169, 186);
             this.txtpeso.Name = "txtpeso";
             this.txtpeso.Size = new System.Drawing.Size(36, 20);
             this.txtpeso.TabIndex = 15;
@@ -224,7 +227,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(199, 226);
+            this.label9.Location = new System.Drawing.Point(211, 189);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(19, 13);
             this.label9.TabIndex = 16;
@@ -238,6 +241,7 @@
             this.imagenperro.Size = new System.Drawing.Size(200, 220);
             this.imagenperro.TabIndex = 17;
             this.imagenperro.TabStop = false;
+            this.imagenperro.Click += new System.EventHandler(this.imagenperro_Click);
             // 
             // bttsubirimg
             // 
@@ -257,7 +261,7 @@
             "Mediano",
             "Grande",
             "Muy Grande"});
-            this.cbxtamaño.Location = new System.Drawing.Point(190, 254);
+            this.cbxtamaño.Location = new System.Drawing.Point(200, 219);
             this.cbxtamaño.Name = "cbxtamaño";
             this.cbxtamaño.Size = new System.Drawing.Size(83, 21);
             this.cbxtamaño.TabIndex = 19;
@@ -267,7 +271,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(13, 287);
+            this.label8.Location = new System.Drawing.Point(12, 258);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(179, 23);
             this.label8.TabIndex = 20;
@@ -277,7 +281,7 @@
             // 
             this.rbttdocil.AutoSize = true;
             this.rbttdocil.BackColor = System.Drawing.Color.Transparent;
-            this.rbttdocil.Location = new System.Drawing.Point(190, 290);
+            this.rbttdocil.Location = new System.Drawing.Point(190, 263);
             this.rbttdocil.Name = "rbttdocil";
             this.rbttdocil.Size = new System.Drawing.Size(49, 17);
             this.rbttdocil.TabIndex = 21;
@@ -289,7 +293,7 @@
             // 
             this.rbttagresi.AutoSize = true;
             this.rbttagresi.BackColor = System.Drawing.Color.Transparent;
-            this.rbttagresi.Location = new System.Drawing.Point(245, 290);
+            this.rbttagresi.Location = new System.Drawing.Point(245, 264);
             this.rbttagresi.Name = "rbttagresi";
             this.rbttagresi.Size = new System.Drawing.Size(66, 17);
             this.rbttagresi.TabIndex = 22;
@@ -301,7 +305,7 @@
             // 
             this.bttregistrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bttregistrar.Location = new System.Drawing.Point(216, 333);
-            this.bttregistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bttregistrar.Margin = new System.Windows.Forms.Padding(2);
             this.bttregistrar.Name = "bttregistrar";
             this.bttregistrar.Size = new System.Drawing.Size(67, 22);
             this.bttregistrar.TabIndex = 23;
@@ -320,12 +324,44 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(12, 290);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(237, 23);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Instrucciones Especiales:";
+            // 
+            // txtespecial
+            // 
+            this.txtespecial.Location = new System.Drawing.Point(255, 293);
+            this.txtespecial.Name = "txtespecial";
+            this.txtespecial.Size = new System.Drawing.Size(112, 20);
+            this.txtespecial.TabIndex = 26;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(122, 127);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(32, 16);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Años";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.txtespecial);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.bttregistrar);
             this.Controls.Add(this.rbttagresi);
@@ -349,7 +385,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form3";
             this.Text = "Sistema de Reserva \"PetBed\"";
             this.Load += new System.EventHandler(this.Form3_Load);
@@ -384,5 +420,8 @@
         private System.Windows.Forms.RadioButton rbttagresi;
         private System.Windows.Forms.Button bttregistrar;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtespecial;
+        private System.Windows.Forms.Label label11;
     }
 }

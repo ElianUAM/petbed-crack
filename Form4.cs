@@ -16,6 +16,28 @@ namespace petbedcrack
         public Form4()
         {
             InitializeComponent();
+            dtphospedaje.MinDate = DateTime.Today;
+            dtpsalida.MinDate = DateTime.Today;
+
+            dtphospedaje.ValueChanged += dtphospedaje_ValueChanged;
+            dtpsalida.ValueChanged += dtpsalida_ValueChanged;
+
+        }
+
+        private void dtphospedaje_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtphospedaje.Value > dtpsalida.Value)
+            {
+                dtpsalida.Value = dtphospedaje.Value;
+            }
+        }
+
+        private void dtpsalida_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpsalida.Value < dtphospedaje.Value)
+            {
+                dtphospedaje.Value = dtpsalida.Value;
+            }
         }
 
         private void Form4_Load(object sender, EventArgs e)
@@ -41,6 +63,13 @@ namespace petbedcrack
             form2.Size = new System.Drawing.Size(616, 405);
             form2.Show();
 
+
+            DateTime fechaEntrada = dtphospedaje.Value;
+            DateTime fechaSalida = dtpsalida.Value;
+
+
         }
+
+       
     }
 }
