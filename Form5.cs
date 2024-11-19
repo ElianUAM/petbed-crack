@@ -17,14 +17,15 @@ namespace petbedcrack
        DateTime fechaSalida;
 
 
-        public Form5(DateTime entrada, DateTime salida)
+        public Form5(DateTime fechaEntrada, DateTime fechaSalida)
         {
             InitializeComponent();
-            this.fechaEntrada = entrada;
-            this.fechaSalida = salida;
 
-            txtingreso.Text = $"Fecha de Ingreso: {fechaEntrada.ToShortDateString()}";
-            txtsalida.Text = $"Fecha de Salida: {fechaSalida.ToShortDateString()}";
+            this.fechaEntrada = fechaEntrada;
+            this.fechaSalida = fechaSalida;
+
+            txtingreso.Text = $"Fecha de Ingreso: {this.fechaEntrada.ToString("dd/MM/yyyy")}";
+            txtsalida.Text = $"Fecha de Salida: {this.fechaSalida.ToString("dd/MM/yyyy")}";
             CalcularDias();
 
         }
@@ -43,11 +44,16 @@ namespace petbedcrack
         private void CalcularDias()
         {
             int totalDias = (fechaSalida - fechaEntrada).Days;
-            txtdias.Text = totalDias.ToString();
 
+            // Verifica si la fecha de salida es antes de la de entrada
             if (totalDias <= 0)
             {
                 MessageBox.Show("La fecha de salida debe ser mayor a la fecha de entrada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtdias.Text = "0"; // Evitar mostrar un número negativo o incorrecto
+            }
+            else
+            {
+                txtdias.Text = totalDias.ToString();
             }
         }
 

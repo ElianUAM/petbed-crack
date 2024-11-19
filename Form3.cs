@@ -19,18 +19,36 @@ namespace petbed
         private Form2 formprincipal;
         private Form2 form2;
         private Form5 form5;
+        private Form4 form4;
+        private DateTime fechaEntrada;
+        private DateTime fechaSalida;
 
-        public Form3(Form2 formanterior, Form2 formprincipal)
+        public Form3(Form2 form2, Form2 formanterior, Form2 formprincipal, Form4 form4, DateTime fechaEntrada, DateTime fechaSalida)
         {
             InitializeComponent();
             this.formanterior = formanterior;
             this.formprincipal = formprincipal;
+            this.form4 = form4;
+            this.fechaEntrada = fechaEntrada;
+            this.fechaSalida = fechaSalida; 
+            this.form2 = form2;
+            
         }
 
         public Form3(Form2 form2)
         {
             InitializeComponent();
             this.form2 = form2;
+        }
+
+        public Form3(DateTime fechaEntrada, DateTime fechaSalida)
+        {
+            this.fechaEntrada = fechaEntrada;
+            this.fechaSalida = fechaSalida;
+        }
+
+        public Form3(Form2 form2, DateTime fechaEntrada, DateTime fechaSalida) : this(form2)
+        {
         }
 
         [Serializable]
@@ -209,7 +227,7 @@ namespace petbed
         private void button1_Click(object sender, EventArgs e)
         {
             GuardarDatos(rbttdocil, rbttagresi, cbxtamaño, cbxraza, imagenperro);
-            Form form5 = new Form5(this);
+            Form form5 = new Form5(fechaEntrada, fechaSalida);
             this.Hide();
             form5.Show();
 

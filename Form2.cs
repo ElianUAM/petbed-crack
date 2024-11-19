@@ -19,16 +19,22 @@ namespace petbed
     
     public partial class Form2 : Form
     {
-
+        private DateTime fechaEntrada;
+        private DateTime fechaSalida;
 
         private Form4 formanterior;
-        public Form2(Form4 formanterior)
+        public Form2(Form4 formanterior, DateTime fechaEntrada, DateTime fechaSalida)
         {
             InitializeComponent();
             this.formanterior = formanterior;
+            this.fechaEntrada = fechaEntrada;
+            this.fechaSalida = fechaSalida;
+
+
         }
 
-        
+      
+
         [Serializable]
 
 
@@ -136,7 +142,7 @@ namespace petbed
             if (formularioscreados < totalformularios)
             {
                 
-                Form3 form3 = new Form3(this);
+                Form3 form3 = new Form3(this, fechaEntrada, fechaSalida);
                 this.Hide();
                 form3.Show();
             }
@@ -186,6 +192,7 @@ namespace petbed
             {
                 // Anula la tecla para evitar que se muestre en el TextBox
                 errorProvider3.SetError(txtnomb, "Solo se permiten letras");
+                e.Handled = true;
                 
             }
             else

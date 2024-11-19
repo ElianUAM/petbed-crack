@@ -13,30 +13,46 @@ namespace petbedcrack
 {
     public partial class Form4 : Form
     {
+
+        public DateTime FechaEntrada {  get; set; }
+        public DateTime FechaSalida { get; set; }
+
         public Form4()
         {
             InitializeComponent();
-            dtphospedaje.MinDate = DateTime.Today;
-            dtpsalida.MinDate = DateTime.Today;
 
-            dtphospedaje.ValueChanged += dtphospedaje_ValueChanged;
-            dtpsalida.ValueChanged += dtpsalida_ValueChanged;
+
+            FechaEntrada = dtpentrada.Value;
+            FechaSalida = dtpsalida.Value;
+            
+            dtpentrada.MinDate = DateTime.Today;
+            dtpsalida.MinDate = DateTime.Today;
 
         }
 
-        private void dtphospedaje_ValueChanged(object sender, EventArgs e)
+        public void dtphospedaje_ValueChanged(object sender, EventArgs e)
         {
-            if (dtphospedaje.Value > dtpsalida.Value)
+            if (dtpentrada.Value.Date < dtpsalida.Value)
             {
-                dtpsalida.Value = dtphospedaje.Value;
+                dtpentrada.Value = DateTime.Today;
+                if (FechaEntrada == default || FechaSalida == default)
+                {
+                    MessageBox.Show("Las fechas no se han configurado correctamente en el Form4.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
             }
         }
 
-        private void dtpsalida_ValueChanged(object sender, EventArgs e)
+        public void dtpsalida_ValueChanged(object sender, EventArgs e)
         {
-            if (dtpsalida.Value < dtphospedaje.Value)
+            if (dtpsalida.Value < dtpentrada.Value)
             {
-                dtphospedaje.Value = dtpsalida.Value;
+                dtpentrada.Value = dtpsalida.Value;
+                if (FechaEntrada == default || FechaSalida == default)
+                {
+                    MessageBox.Show("Las fechas no se han configurado correctamente en el Form4.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
             }
         }
 
@@ -57,16 +73,17 @@ namespace petbedcrack
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form form2 = new Form2(this);
-            this.Hide();
+
+            DateTime FechaEntrada = dtpentrada.Value;
+            DateTime FechaSalida = dtpsalida.Value;
+
+            Form2 form2 = new Form2(this, FechaEntrada, FechaSalida);
             form2.Text = "Datos del Cliente";
             form2.Size = new System.Drawing.Size(616, 405);
             form2.Show();
+            this.Hide();
 
-
-            DateTime fechaEntrada = dtphospedaje.Value;
-            DateTime fechaSalida = dtpsalida.Value;
-
+            
 
         }
 
