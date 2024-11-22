@@ -11,18 +11,18 @@ using System.Windows.Forms;
 
 namespace petbedcrack
 {
-    public static class fecha
-    {
-        public static DateTime fechaEntrada { get; set; }
-        public static DateTime fechaSalida { get; set; }
-    }
+    
 
     public partial class Form4 : Form
     {
 
-       
+        public static class fecha
+        {
+            public static DateTime fechaEntrada { get; set; }
+            public static DateTime fechaSalida { get; set; }
+        }
 
-        
+
 
         public Form4()
         {

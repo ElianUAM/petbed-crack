@@ -66,7 +66,7 @@
             // 
             this.dtpentrada.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpentrada.Location = new System.Drawing.Point(227, 63);
-            this.dtpentrada.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpentrada.Margin = new System.Windows.Forms.Padding(2);
             this.dtpentrada.Name = "dtpentrada";
             this.dtpentrada.Size = new System.Drawing.Size(256, 23);
             this.dtpentrada.TabIndex = 1;
@@ -76,7 +76,7 @@
             // 
             this.dtpsalida.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpsalida.Location = new System.Drawing.Point(183, 102);
-            this.dtpsalida.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpsalida.Margin = new System.Windows.Forms.Padding(2);
             this.dtpsalida.Name = "dtpsalida";
             this.dtpsalida.Size = new System.Drawing.Size(254, 23);
             this.dtpsalida.TabIndex = 2;
@@ -108,7 +108,7 @@
             // 
             this.rbttcredito.AutoSize = true;
             this.rbttcredito.Location = new System.Drawing.Point(16, 62);
-            this.rbttcredito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbttcredito.Margin = new System.Windows.Forms.Padding(2);
             this.rbttcredito.Name = "rbttcredito";
             this.rbttcredito.Size = new System.Drawing.Size(163, 26);
             this.rbttcredito.TabIndex = 6;
@@ -120,7 +120,7 @@
             // 
             this.rbttdebito.AutoSize = true;
             this.rbttdebito.Location = new System.Drawing.Point(16, 93);
-            this.rbttdebito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbttdebito.Margin = new System.Windows.Forms.Padding(2);
             this.rbttdebito.Name = "rbttdebito";
             this.rbttdebito.Size = new System.Drawing.Size(156, 26);
             this.rbttdebito.TabIndex = 7;
@@ -132,7 +132,7 @@
             // 
             this.rbttefectivo.AutoSize = true;
             this.rbttefectivo.Location = new System.Drawing.Point(15, 31);
-            this.rbttefectivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbttefectivo.Margin = new System.Windows.Forms.Padding(2);
             this.rbttefectivo.Name = "rbttefectivo";
             this.rbttefectivo.Size = new System.Drawing.Size(103, 26);
             this.rbttefectivo.TabIndex = 8;
@@ -146,9 +146,9 @@
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(389, 235);
+            this.groupBox1.Location = new System.Drawing.Point(2, 244);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(210, 119);
+            this.groupBox1.Size = new System.Drawing.Size(219, 119);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tamaño de la cama";
@@ -196,7 +196,7 @@
             this.groupBox2.Controls.Add(this.rbttefectivo);
             this.groupBox2.Controls.Add(this.rbttdebito);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(2, 235);
+            this.groupBox2.Location = new System.Drawing.Point(403, 244);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(194, 119);
             this.groupBox2.TabIndex = 14;
@@ -241,7 +241,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(202, 319);
+            this.button1.Location = new System.Drawing.Point(227, 331);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 18;
@@ -251,7 +251,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(295, 319);
+            this.button2.Location = new System.Drawing.Point(316, 331);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 19;
@@ -275,7 +275,7 @@
             this.Controls.Add(this.dtpsalida);
             this.Controls.Add(this.dtpentrada);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form4";
             this.Text = "Sistema de Reserva \"PetBed\"";
             this.Load += new System.EventHandler(this.Form4_Load);
