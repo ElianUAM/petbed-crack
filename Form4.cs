@@ -16,14 +16,6 @@ namespace petbedcrack
     public partial class Form4 : Form
     {
 
-        public static class fecha
-        {
-            public static DateTime fechaEntrada { get; set; }
-            public static DateTime fechaSalida { get; set; }
-        }
-
-
-
         public Form4()
         {
             InitializeComponent();
