@@ -19,8 +19,8 @@ namespace petbed
     
     public partial class Form2 : Form
     {
-        private DateTime fechaEntrada;
-        private DateTime fechaSalida;
+        DateTime fechaEntrada;
+        DateTime fechaSalida;
 
         private Form4 formanterior;
         public Form2(Form4 formanterior, DateTime fechaEntrada, DateTime fechaSalida)

@@ -11,19 +11,26 @@ using System.Windows.Forms;
 
 namespace petbedcrack
 {
+    public static class fecha
+    {
+        public static DateTime fechaEntrada { get; set; }
+        public static DateTime fechaSalida { get; set; }
+    }
+
     public partial class Form4 : Form
     {
 
-        public DateTime FechaEntrada {  get; set; }
-        public DateTime FechaSalida { get; set; }
+       
+
+        
 
         public Form4()
         {
             InitializeComponent();
 
 
-            FechaEntrada = dtpentrada.Value;
-            FechaSalida = dtpsalida.Value;
+           fecha.fechaEntrada = dtpentrada.Value;
+           fecha.fechaSalida = dtpsalida.Value;
             
             dtpentrada.MinDate = DateTime.Today;
             dtpsalida.MinDate = DateTime.Today;
@@ -34,8 +41,8 @@ namespace petbedcrack
         {
             if (dtpentrada.Value.Date < dtpsalida.Value)
             {
-                dtpentrada.Value = DateTime.Today;
-                if (FechaEntrada == default || FechaSalida == default)
+
+                if (fecha.fechaEntrada == default || fecha.fechaSalida == default)
                 {
                     MessageBox.Show("Las fechas no se han configurado correctamente en el Form4.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -48,7 +55,7 @@ namespace petbedcrack
             if (dtpsalida.Value < dtpentrada.Value)
             {
                 dtpentrada.Value = dtpsalida.Value;
-                if (FechaEntrada == default || FechaSalida == default)
+                if (fecha.fechaEntrada == default || fecha.fechaSalida == default)
                 {
                     MessageBox.Show("Las fechas no se han configurado correctamente en el Form4.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -74,10 +81,8 @@ namespace petbedcrack
         private void button1_Click(object sender, EventArgs e)
         {
 
-            DateTime FechaEntrada = dtpentrada.Value;
-            DateTime FechaSalida = dtpsalida.Value;
 
-            Form2 form2 = new Form2(this, FechaEntrada, FechaSalida);
+            Form2 form2 = new Form2(this, fecha.fechaEntrada, fecha.fechaSalida);
             form2.Text = "Datos del Cliente";
             form2.Size = new System.Drawing.Size(616, 405);
             form2.Show();

@@ -17,15 +17,15 @@ namespace petbedcrack
        DateTime fechaSalida;
 
 
-        public Form5(DateTime fechaEntrada, DateTime fechaSalida)
+        public Form5(Form3 form3, DateTime fechaEntrada, DateTime fechaSalida)
         {
             InitializeComponent();
 
             this.fechaEntrada = fechaEntrada;
             this.fechaSalida = fechaSalida;
 
-            txtingreso.Text = $"Fecha de Ingreso: {this.fechaEntrada.ToString("dd/MM/yyyy")}";
-            txtsalida.Text = $"Fecha de Salida: {this.fechaSalida.ToString("dd/MM/yyyy")}";
+            txtingreso.Text = $"Fecha de Ingreso: {fecha.fechaEntrada.ToString("dd/MM/yyyy")}";
+            txtsalida.Text = $"Fecha de Salida: {fecha.fechaSalida.ToString("dd/MM/yyyy")}";
             CalcularDias();
 
         }
@@ -37,9 +37,6 @@ namespace petbedcrack
             this.formAnterior = formAnterior;
         }
 
-        public Form5()
-        {
-        }
 
         private void CalcularDias()
         {
@@ -59,6 +56,7 @@ namespace petbedcrack
 
         private void Form5_Load(object sender, EventArgs e)
         {
+            
 
         }
 
