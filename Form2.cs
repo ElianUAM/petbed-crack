@@ -19,6 +19,7 @@ namespace petbed
     
     public partial class Form2 : Form
     {
+     
         DateTime fechaEntrada;
         DateTime fechaSalida;
 
@@ -30,30 +31,33 @@ namespace petbed
             this.fechaEntrada = fechaEntrada;
             this.fechaSalida = fechaSalida;
 
-
         }
 
-      
+        private List<Cliente> clientes = new List<Cliente>();
+        private int siguienteID = 1;
 
         [Serializable]
 
 
-        public class FormData
+        public class Cliente
         {
+            public int ID { get; set; }
             public string txtnombrecompleto { get; set; }
             public string txtcel { get; set; }
             public string txtemail { get; set; }
             public string txtdireccion { get; set; }
             public string txtcontacto { get; set; }
-            public string txtnumperros { get; set; }
+            public string txtnumperros { get; set; } 
+            
 
         }
 
         public void GuardarDatos()
         {
             // Crear una instancia de la clase FormData
-            FormData Datos_Clientes = new FormData
+            Cliente Datos_Clientes = new Cliente
             {
+                ID = siguienteID,
                 txtnombrecompleto = txtnomb.Text ,
                 txtcel = txttelefono.ToString() ,
                 txtemail = txtemail.ToString() ,
@@ -87,15 +91,18 @@ namespace petbed
                 using (FileStream stream = new FileStream("Datos_Clientes.bin", FileMode.Open))
                 {
                     // Deserializar el archivo y convertirlo de nuevo a un objeto 'FormData'
-                    FormData data = (FormData)formatter.Deserialize(stream);
+                    Cliente data = (Cliente)formatter.Deserialize(stream);
 
                     // Restaurar los valores en los controles
+                   siguienteID = data.ID;
                    txtnomb.Text = data.txtnombrecompleto;
                    txttelefono.Text = data.txtcel;
                    txtemail.Text = data.txtemail;
                    txtdire.Text = data.txtdireccion;
                    txtctc1.Text = data.txtcontacto;
                    txtnumper.Text = data.txtnumperros;
+
+                    siguienteID = clientes.Count > 0 ? clientes[0].ID + 1 : 1;
                 }
 
                 MessageBox.Show("Datos cargados con éxito.");

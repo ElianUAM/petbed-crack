@@ -37,9 +37,9 @@
             this.rbttdebito = new System.Windows.Forms.RadioButton();
             this.rbttefectivo = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbttvip = new System.Windows.Forms.RadioButton();
+            this.rbttnormal = new System.Windows.Forms.RadioButton();
+            this.rbttgrande = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
@@ -142,9 +142,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rbttvip);
+            this.groupBox1.Controls.Add(this.rbttnormal);
+            this.groupBox1.Controls.Add(this.rbttgrande);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(2, 244);
             this.groupBox1.Name = "groupBox1";
@@ -154,41 +154,42 @@
             this.groupBox1.Text = "Tamaño de la cama";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // radioButton3
+            // rbttvip
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(16, 93);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(53, 25);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "VIP";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbttvip.AutoSize = true;
+            this.rbttvip.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbttvip.Location = new System.Drawing.Point(16, 93);
+            this.rbttvip.Name = "rbttvip";
+            this.rbttvip.Size = new System.Drawing.Size(53, 25);
+            this.rbttvip.TabIndex = 2;
+            this.rbttvip.TabStop = true;
+            this.rbttvip.Text = "VIP";
+            this.rbttvip.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbttnormal
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(16, 31);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(84, 25);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Normal";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbttnormal.AutoSize = true;
+            this.rbttnormal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbttnormal.Location = new System.Drawing.Point(16, 31);
+            this.rbttnormal.Name = "rbttnormal";
+            this.rbttnormal.Size = new System.Drawing.Size(84, 25);
+            this.rbttnormal.TabIndex = 1;
+            this.rbttnormal.TabStop = true;
+            this.rbttnormal.Text = "Normal";
+            this.rbttnormal.UseVisualStyleBackColor = true;
+            this.rbttnormal.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // radioButton1
+            // rbttgrande
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(16, 62);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(89, 25);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Grande";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbttgrande.AutoSize = true;
+            this.rbttgrande.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbttgrande.Location = new System.Drawing.Point(16, 62);
+            this.rbttgrande.Name = "rbttgrande";
+            this.rbttgrande.Size = new System.Drawing.Size(89, 25);
+            this.rbttgrande.TabIndex = 0;
+            this.rbttgrande.TabStop = true;
+            this.rbttgrande.Text = "Grande";
+            this.rbttgrande.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -301,9 +302,9 @@
         private System.Windows.Forms.RadioButton rbttdebito;
         private System.Windows.Forms.RadioButton rbttefectivo;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbttvip;
+        private System.Windows.Forms.RadioButton rbttnormal;
+        private System.Windows.Forms.RadioButton rbttgrande;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton5;

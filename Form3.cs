@@ -22,6 +22,7 @@ namespace petbed
         private Form4 form4;
         DateTime fechaEntrada;
         DateTime fechaSalida;
+        
 
         public Form3(Form2 form2, Form2 formanterior, Form2 formprincipal, Form4 form4, DateTime fechaEntrada, DateTime fechaSalida) : this(form2)
         {
@@ -32,6 +33,8 @@ namespace petbed
             this.fechaEntrada = fechaEntrada;
             this.fechaSalida = fechaSalida; 
             this.form2 = form2;
+            
+            
             
         }
 
@@ -48,6 +51,7 @@ namespace petbed
         [Serializable]
         public class FormData
         {
+            public int ID { get; set; }
             public string txtnombreperro { get; set; }
             public string cbxraza { get; set; }
             public string txtedad { get; set; }
@@ -57,6 +61,7 @@ namespace petbed
             public string rbttsexo { get; set; }
             public string txtinstrucciones { get; set; }
             public byte[] imagenperro { get; set; }
+            public int clienteID { get; set; }
 
         }
 
@@ -85,7 +90,7 @@ namespace petbed
 
 
 
-        public void GuardarDatos(RadioButton rbttdocil, RadioButton rbttagresi, ComboBox cbxtamaño, ComboBox cbxraza, PictureBox imagenperro)
+        public void GuardarDatos(RadioButton rbttdocil1, RadioButton rbttagresi1, ComboBox cbxtamaño1, ComboBox cbxraza1, PictureBox imagenperro1)
         {
             // Crear una instancia de la clase FormData
             FormData Datos_Perros = new FormData
@@ -115,7 +120,7 @@ namespace petbed
         }
 
 
-        public void CargarDatos(RadioButton rbttdocil, RadioButton rbttagresi, ComboBox cbxtamaño, ComboBox cbxraza, PictureBox imagenperro)
+        public void CargarDatos(RadioButton rbttdocil1, RadioButton rbttagresi1, ComboBox cbxtamaño1, ComboBox cbxraza1, PictureBox imagenperro1)
         {
             if (File.Exists("Datos_Perros.bin"))
             {

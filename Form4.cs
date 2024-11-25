@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,6 +29,14 @@ namespace petbedcrack
             dtpsalida.MinDate = DateTime.Today;
 
         }
+
+        public RadioButton HGRANDE => rbttgrande;
+        public RadioButton HNORMAL => rbttnormal;
+        public RadioButton HVIP => rbttvip;
+
+        public DateTimePicker fentrada => dtpentrada;
+        public DateTimePicker fsalida => dtpsalida;
+
 
         public void dtphospedaje_ValueChanged(object sender, EventArgs e)
         {
@@ -84,6 +93,9 @@ namespace petbedcrack
 
         }
 
-       
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
